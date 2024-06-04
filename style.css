@@ -1,0 +1,635 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    scroll-behavior: smooth;
+    background-color: black;
+}
+.hero {
+    background-image: url('https://preview.colorlib.com/theme/gymlife/img/hero/hero-1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    color: white;
+    text-align: center;
+}
+.hero-content{
+    width: 45%;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-top: 1.5rem;
+  
+}
+.hero-content span{
+  
+    
+    letter-spacing: 4px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+.hero p {
+    font-size: 1.5em;
+    margin: 10px 0 20px;
+}
+.hero button {
+    padding: 15px 20px;
+    font-size: 1em;
+    color: white;
+    background-color:#f36100;
+    border:2px solid transparent;
+    cursor: pointer;
+    transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.hero button:hover{
+    background-color: transparent;
+    border: 2px solid #f36100;
+}
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    padding: 0 3rem;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    box-sizing: border-box;
+}
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+}
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.nav-links a:hover{
+    color: #f36100;
+    
+}
+.navbar .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.navbar .menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+.services-section {
+background-color: black;
+color: white;
+padding: 50px 20px;
+text-align: center;
+}
+
+.services-section h2 {
+font-size: 2.5em;
+margin-bottom: 40px;
+letter-spacing: 3px;
+color: #f36100;
+text-transform: uppercase;
+}
+
+.service-cards {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+}
+
+.service-card {
+background-color: #1a1a1a;
+border: 2px solid #f36100;
+border-radius: 1px;
+overflow: hidden;
+width: 300px;
+height: 380px; /* Set height for consistency */
+transition: transform 0.3s, box-shadow 0.3s;
+background-size: cover;
+background-position: center;
+position: relative; /* Needed for absolute positioning of content */
+}
+
+.service-card .service-content {
+position: absolute;
+bottom: 0;
+left: 0;
+
+padding: 20px;
+
+}
+
+.service-card h3 {
+font-size: 1.5em;
+margin: 0;
+}
+
+.service-card p {
+font-size: 1em;
+margin: 10px 0 0;
+}
+
+.service-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+strong{
+color: #f36100;;
+}
+.facilities-section {
+background-color: white;
+padding: 50px 45px;
+text-align: center;
+display: flex;
+flex-direction: column;
+width: 100%;
+align-items: center;
+box-sizing: border-box;
+}
+
+.facilities-section h2 {
+font-size: 2.5em;
+margin-bottom: 40px;
+width: 100%;
+text-align: left;
+padding-left: 2rem;
+text-transform: uppercase;
+color: #f36100;
+letter-spacing: 3px;
+max-width: 1400px;
+}
+
+.facility-cards {
+display: flex;
+flex-wrap: wrap;
+max-width: 1400px;
+justify-content: center;
+width: 100%;
+gap: 10px;
+}
+
+.facility-card {
+background-color: #f9f9f9;
+
+border-radius: 0;
+overflow: hidden;
+flex: 0 0 24%;
+max-width: 24%;
+height: 390px; /* Set height for consistency */
+transition: transform 0.3s, box-shadow 0.3s;
+background-size: cover;
+background-position: center;
+position: relative; /* Needed for absolute positioning of content */
+box-sizing: border-box;
+}
+
+.facility-card h3 {
+font-size: 1.5em;
+margin: 0;
+position: absolute;
+bottom: 20px;
+left: 0;
+width: 100%;
+
+color: white;
+padding: 10px 0;
+}
+
+.facility-card:hover {
+transform: translateY(-10px);
+
+}
+.membership-section {
+background-color: #fafafaee;
+padding: 50px 45px;
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+box-sizing: border-box;
+}
+
+.membership-section h2 {
+font-size: 2.5em;
+margin-bottom: 40px;
+width: 100%;
+text-align: left;
+padding-left: 2rem;
+text-transform: uppercase;
+color: #f36100;
+letter-spacing: 3px;
+max-width: 1400px;
+
+}
+
+.membership-plans {
+display: flex;
+max-width: 1400px;
+gap: 10px;
+width: 100%;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.membership-plan {
+background-color: #fff;
+border: 2px solid #f36100;
+border-radius: 0;
+padding: 20px;
+flex: 0 0 24%;
+box-sizing: border-box;
+max-width: 24%;
+height: 390px; /* Set card height */
+transition: transform 0.3s, box-shadow 0.3s;
+display: flex;
+flex-direction: column;
+justify-content: space-between; /* Space between content and button */
+}
+
+.membership-plan h3 {
+font-size: 1.5em;
+margin-bottom: 15px;
+}
+
+.membership-plan ul {
+padding-left: 0;
+list-style-type: none;
+text-align: left;
+flex-grow: 1; /* Allow list to grow to fill available space */
+}
+
+.membership-plan li {
+margin-bottom: 13px;
+}
+
+.membership-plan button {
+background-color: #f36100;
+color: #fff;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s;
+width: 100%; /* Full width button */
+}
+
+.membership-plan button:hover {
+transform: translateY(-10px);
+}
+
+.membership-plan:hover {
+transform: translateY(-10px);
+
+}
+.header {
+    background-color: black;
+    color: #f36100;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 20px;
+    text-align: center;
+}
+
+.blog-section {
+    background-color: black;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 1400px;
+    width: 100%;
+}
+.blog-section h2{
+       flex: 0 0 100%;
+       font-size: 2.5em;
+margin-bottom: 40px;
+box-sizing: border-box;
+text-align: left;
+padding-left: 2rem;
+text-transform: uppercase;
+color: #f36100;
+letter-spacing: 3px;
+max-width: 1400px;
+      
+       
+}
+
+.blog-post {
+    background-position:top center;
+    background-size: cover;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 24%;
+    height: 350px;
+    box-sizing: border-box;
+    position: relative;
+    border: 2px solid #f36100;
+    overflow: hidden;
+    transition: transform .3s ease-in-out;
+}
+.blog-post:hover {
+       transform: scale(1.03);
+}
+.blog-post h3, .blog-post p{
+    position: absolute;
+}
+.blog-post h3{
+    top: 40%;
+}
+.blog-post p{
+    bottom: 0;
+}
+
+.blog-image {
+    max-width: 100%;
+    height: auto;
+}
+.strength{
+    background-image: url('https://images.unsplash.com/photo-1577221084712-45b0445d2b00?q=80&w=1898&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+.health{
+    background-image: url('https://images.unsplash.com/photo-1591089398845-0dbbbdba1f75?q=80&w=1948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+.yoga{
+    background-image: url('https://images.unsplash.com/photo-1532798442725-41036acc7489?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+.blog{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.contact-section {
+background-color: #fff;
+padding: 50px 20px;
+text-align: center;
+}
+
+.contact-section h2 {
+font-size: 2.5em;
+margin-bottom: 10px;
+color: #f36100;
+letter-spacing: 4px;
+text-transform: uppercase;
+font-style: italic;
+}
+.contact-section p {
+margin-bottom: 20px;
+}
+.contact-form form {
+max-width: 500px;
+margin: 0 auto;
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+width: 100%;
+padding: 10px;
+border: 2px solid #ddd;
+border-radius: 5px;
+box-sizing: border-box;
+transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+border-color: #ff6600;
+outline: none;
+}
+
+button[type="submit"] {
+background-color: #ff6600;
+color: #fff;
+padding: 15px 25px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+width: 100%;
+transition: transform 0.3s;
+}
+
+button[type="submit"]:hover {
+transform: translateY(-3px);
+}
+
+
+.footer {
+background-color: #000;
+color: #fff;
+padding: 80px 50px;
+display: flex;
+flex-wrap: wrap;
+/* justify-content: space-around; */
+text-align: left;
+box-sizing: border-box;
+}
+
+.footer > div {
+flex: 0 0 25%;
+max-width: 25%;
+}
+
+.contact-info p {
+margin: 10px 0;
+}
+.footer-nav {
+flex: 0 0 25%;
+max-width: 25%;
+display: flex;
+justify-content: center;
+}
+.footer-nav ul {
+list-style-type: none;
+padding: 0;
+}
+
+.footer-nav ul li {
+margin-bottom: 10px;
+
+}
+
+.footer-nav ul li:last-child {
+margin-bottom: 0;
+}
+
+.footer-nav ul li a {
+color: #fff;
+text-decoration: none;
+transition: color 0.3s;
+}
+
+.footer-nav ul li a:hover {
+color: #ff6600;
+}
+
+.social-icons {
+text-align: center;
+display: flex;
+flex-direction: column;
+}
+
+.social-icons a {
+color: #fff;
+margin: 15px 10px;
+transition: color 0.3s;
+}
+
+.social-icons a:hover {
+color: #ff6600;
+}
+
+.newsletter {
+text-align: left;
+}
+
+.newsletter input[type="email"],
+.newsletter button {
+padding: 10px;
+border: none;
+border-radius: 5px;
+margin: 5px 0;
+}
+
+.newsletter input[type="email"] {
+width: 100%;
+margin-right: 10px;
+background: none;
+border: 1px solid orange;
+color: #fff;
+border-radius: 50rem;
+padding: 15px;
+}
+
+.newsletter input[type="email"]::placeholder {
+color: #fff;
+}
+
+.newsletter button {
+background-color: #ff6600;
+color: #fff;
+cursor: pointer;
+transition: background-color 0.3s, transform 0.3s;
+margin-top: 10px;
+margin-left: 10px;
+}
+
+.newsletter button:hover {
+background-color: #ff8c00;
+transform: translateY(-3px);
+}
+/* Add this to the existing CSS */
+@media (max-width: 768px) {
+/* Styles for screens smaller than 768px */
+.blog-post h3{
+top: 20%;
+}
+.footer{
+justify-content: center;
+}
+.footer > div {
+max-width: 100%;
+flex: 0 0 100%;
+margin-bottom: 20px;
+text-align: center;
+}
+.footer-nav ul {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+flex-direction: column;
+text-align: center;
+}
+.footer-nav ul li {
+margin: 10px;
+}
+}
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8);
+        box-sizing: border-box;
+    }
+    .navbar .nav-links li {
+        margin: 15px 0;
+    }
+    .navbar .menu-toggle {
+        display: flex;
+    }
+    .navbar .nav-links.active {
+        display: flex;
+    }
+}
+@media (max-width:1000px){
+    .blog-post,.facility-card, .membership-plan{
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+    .facility-cards, .membership-plans{
+        gap: 20px;
+    }
+    .hero {
+align-items: center;
+text-align: center;
+}
+.hero-content {
+width: 90%;
+}
+
+}
+@media (max-width:650px){
+    .blog-post,.service-card,.facility-card, .membership-plan{
+        flex: 0 0 80%;
+        max-width: 80%;
+    }
+}
+@media (max-width:500px){
+    .blog-post,.service-card,.facility-card, .membership-plan{
+        flex: 0 0 calc(100% - 0px);
+        max-width: calc(100% - 0px);
+    }
+
+    .facilities-section, .membership-section{
+        padding: 50px 20px;
+    }
+    .membership-section h2, .facilities-section h2{
+        font-size: 2rem;
+        padding: 0;
+    }
+}
